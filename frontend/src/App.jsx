@@ -17,14 +17,20 @@ function App() {
     setPlanData(null);
 
     try {
-      const gap = await axios.post("http://localhost:5000/api/skill-gap", {
-        targetRole: roleName,
-        currentSkills: skillInput,
-      });
+      const gap = await axios.post(
+        "https://code-at-random-intern-assignment.vercel.app/api/skill-gap",
+        {
+          targetRole: roleName,
+          currentSkills: skillInput,
+        }
+      );
 
-      const roadmap = await axios.post("http://localhost:5000/api/roadmap", {
-        targetRole: roleName,
-      });
+      const roadmap = await axios.post(
+        "https://code-at-random-intern-assignment.vercel.app/api/roadmap",
+        {
+          targetRole: roleName,
+        }
+      );
 
       setSkillsData(gap.data);
       setPlanData(roadmap.data);
