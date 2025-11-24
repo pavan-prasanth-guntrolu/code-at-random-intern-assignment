@@ -2,7 +2,7 @@
 
 Welcome to the Career Path App! This application helps users analyze their skill gaps for specific roles and generates a career roadmap to guide their learning journey.
 
-## 🛠️ Tech Stack Used
+## Tech Stack Used
 
 ### Frontend
 - **React**: A JavaScript library for building user interfaces.
@@ -18,7 +18,7 @@ Welcome to the Career Path App! This application helps users analyze their skill
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### Prerequisites
 - Node.js (v14 or higher recommended)
@@ -60,7 +60,7 @@ The frontend runs on Vite's default port (usually `5173`).
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 The backend provides the following RESTful API endpoints:
 
@@ -75,7 +75,7 @@ Analyzes the difference between a user's current skills and the required skills 
     "currentSkills": ["HTML", "CSS"]
   }
   ```
-  *(Note: `currentSkills` can be an array of strings or a comma-separated string)*
+ 
 
 - **Response**:
   ```json
@@ -111,11 +111,4 @@ Generates a phased learning roadmap for a specific role.
   }
   ```
 
----
 
-## 📝 Assumptions
-
-- **Ports**: The application assumes port `5000` is free for the backend and port `5173` (default Vite port) is free for the frontend.
-- **Data Persistence**: User queries are logged to a local file `backend/user_queries.json` for simple persistence. There is no external database required.
-- **Roles**: The system currently supports a predefined set of roles: "Frontend Developer", "Backend Developer", and "Data Analyst". Other roles will return a generic roadmap.
-- **Environment**: It is assumed that the user is running this in a local development environment with Node.js installed.
